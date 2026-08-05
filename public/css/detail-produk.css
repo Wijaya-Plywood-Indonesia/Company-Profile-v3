@@ -1,0 +1,449 @@
+/* ---------- 12. DETAIL PRODUK (halaman Detail Produk) ---------- */
+.detail-produk {
+    padding: 64px 24px 40px;
+}
+
+.detail-produk__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+main {
+    padding-top: 90px;
+}
+
+.detail-produk__gambar {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.detail-produk__img {
+    width: 100%;
+    max-width: 300px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: auto;
+    display: block;
+}
+
+.detail-produk__judul {
+    color: var(--coklat-tua);
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.detail-produk__deskripsi {
+    color: var(--coklat-teks);
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Bagian umum: bar judul coklat tua + konten di bawahnya */
+.detail-produk__bagian {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 24px 56px;
+}
+
+.judul-bagian {
+    background-color: var(--coklat-tua);
+    color: var(--putih);
+    font-size: 24px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+}
+
+/* Galeri gambar produk (2 gambar) */
+.galeri-produk {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 400px;
+}
+
+.galeri-produk__gambar {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+.galeri-produk__gambar--tumpuk {
+    background-color: var(--tan-muda);
+}
+
+.judul-bagian {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    padding: 0 20px;
+    background: var(--coklat-tua);
+    color: var(--putih);
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 6px;
+    margin-bottom: 28px;
+}
+
+.detail-produk__gallery {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Teks & galeri jenis aplikasi */
+.jenis-aplikasi__teks {
+    margin-bottom: 32px;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.jenis-aplikasi__teks p {
+    margin: 0 0 16px;
+    padding: 0;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+    color: var(--coklat-teks);
+}
+
+.jenis-aplikasi__gambar {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+/* ---------- 13. FOOTER ---------- */
+.footer {
+    background-color: var(--coklat-tua);
+    padding: 48px 24px 0;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 32px;
+    padding-bottom: 40px;
+}
+
+.footer__judul {
+    color: var(--putih);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer__teks {
+    color: var(--tan-muda);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.footer__list-item {
+    margin-bottom: 10px;
+}
+
+.footer__list-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__link {
+    color: var(--tan-muda);
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+    color: var(--emas);
+}
+
+.footer__bawah {
+    border-top: 1px solid rgba(239, 227, 208, 0.2);
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.footer__copyright {
+    color: var(--tan-muda);
+    font-size: 14px;
+}
+
+/* ==========================================================
+   7. RESPONSIVE - TABLET (max-width: 900px)
+   ========================================================== */
+@media (max-width: 900px) {
+    .produk-unggulan__judul {
+        font-size: 38px;
+    }
+
+    .produk-panel {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .tentang-perusahaan__container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tentang-perusahaan__gambar {
+        order: -1;
+    }
+
+    .hero__image {
+        height: 480px;
+    }
+
+    .perusahaan-kami__container,
+    .sejarah-perusahaan__container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .sejarah-perusahaan__gambar {
+        order: -1;
+    }
+
+    .budaya-kerja__container {
+        grid-template-columns: 1fr;
+    }
+
+    .komitmen-perusahaan {
+        min-height: 440px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 24px;
+    }
+
+    .daftar-produk__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .detail-produk__container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .jenis-aplikasi__galeri {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================================
+   8. RESPONSIVE - TABLET KECIL / MOBILE BESAR (max-width: 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+    .header__toggle {
+        display: flex;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--coklat-tua);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .header__nav--terbuka {
+        max-height: 300px;
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 32px 20px;
+    }
+
+    .header__nav-list li {
+        border-top: 1px solid rgba(239, 227, 208, 0.15);
+    }
+
+    .header__nav-link {
+        display: block;
+        padding: 14px 0;
+    }
+
+    .produk-unggulan__judul {
+        font-size: 32px;
+    }
+
+    .produk-tab-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero__image {
+        height: 380px;
+    }
+
+    .perusahaan-kami__judul,
+    .sejarah-perusahaan__judul,
+    .budaya-kerja__judul {
+        font-size: 32px;
+    }
+
+    .komitmen-perusahaan__judul {
+        font-size: 24px;
+    }
+
+    .komitmen-perusahaan__kutipan {
+        font-size: 18px;
+    }
+
+    .footer__container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .kontak-kartu__container {
+        grid-template-columns: 1fr;
+    }
+
+    .kontak-hero__judul {
+        font-size: 34px;
+    }
+
+    .daftar-produk__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .daftar-produk__judul {
+        font-size: 32px;
+    }
+
+    .detail-produk__judul {
+        font-size: 30px;
+    }
+
+    .judul-bagian {
+        font-size: 21px;
+        padding: 18px 24px;
+    }
+
+    .galeri-produk {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
+
+/* ==========================================================
+   9. RESPONSIVE - MOBILE (max-width: 480px)
+   ========================================================== */
+@media (max-width: 480px) {
+    .header__container {
+        padding: 14px 20px;
+    }
+
+    .header__logo-text {
+        font-size: 9px;
+    }
+
+    .produk-unggulan {
+        padding: 48px 16px 56px;
+    }
+
+    .produk-unggulan__judul {
+        font-size: 26px;
+        margin-bottom: 28px;
+    }
+
+    .produk-tab-bar {
+        padding: 16px 20px;
+    }
+
+    .produk-tab-bar__label {
+        font-size: 18px;
+    }
+
+    .produk-tab-bar__tombol-item {
+        font-size: 15px;
+    }
+
+    .tentang-perusahaan {
+        padding: 48px 16px;
+    }
+
+    .tentang-perusahaan__judul {
+        font-size: 26px;
+    }
+
+    .hero__image {
+        height: 280px;
+    }
+
+    .perusahaan-kami,
+    .sejarah-perusahaan,
+    .budaya-kerja {
+        padding: 48px 16px 56px;
+    }
+
+    .perusahaan-kami__judul,
+    .sejarah-perusahaan__judul,
+    .budaya-kerja__judul {
+        font-size: 26px;
+        margin-bottom: 28px;
+    }
+
+    .komitmen-perusahaan {
+        min-height: 360px;
+    }
+
+    .komitmen-perusahaan__judul {
+        font-size: 20px;
+    }
+
+    .komitmen-perusahaan__kutipan {
+        font-size: 16px;
+    }
+
+    .daftar-produk {
+        padding: 48px 16px 56px;
+    }
+
+    .daftar-produk__judul {
+        font-size: 26px;
+    }
+
+    .daftar-produk__subjudul {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+
+    .detail-produk {
+        padding: 40px 16px 24px;
+    }
+
+    .detail-produk__bagian {
+        padding: 16px 16px 40px;
+    }
+
+    .detail-produk__judul {
+        font-size: 26px;
+    }
+
+    .jenis-aplikasi__galeri {
+        grid-template-columns: 1fr;
+    }
+}

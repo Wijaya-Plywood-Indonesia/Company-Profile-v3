@@ -1,0 +1,544 @@
+/* ==========================================================
+   1. VARIABEL WARNA
+   ========================================================== */
+
+:root {
+    --coklat-tua: #5a3e2b;
+    --coklat-gelap: #4a3320;
+    --coklat-teks: #6b4a32;
+    --emas: #c9a876;
+    --krem: #fbf1e4;
+    --tan: #efe3d0;
+    --putih: #ffffff;
+    --abu: #8a7a68;
+
+    --font: 'Poppins', sans-serif;
+}
+
+/* ==========================================================
+   2. RESET CSS
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+     overflow-x: hidden;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--coklat-teks);
+    background: var(--putih);
+    line-height: 1.7;
+     overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+/* ==========================
+   NAVBAR BOOTSTRAP
+========================== */
+
+.navbar-custom{
+    background: var(--coklat-tua);
+    padding: 18px 0;
+}
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+}
+
+.navbar-brand img{
+    width:60px;
+    height:auto;
+}
+
+.navbar-brand span{
+    color:#efe3d0;
+    font-weight:700;
+    font-size:18px;
+    line-height:1.2;
+}
+
+.navbar-nav{
+    gap:20px;
+}
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.navbar-toggler-icon{
+    filter: invert(80%) sepia(30%) saturate(400%) hue-rotate(350deg);
+}
+
+.nav-link{
+    color:#5a3e2b !important;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-link.active{
+    font-weight:700;
+    color:#5a3e2b !important;
+}
+
+.nav-link:hover{
+    color:#5a3e2b !important;
+}
+
+.offcanvas {
+    width: 300px;
+    max-width: 80%;
+    background: var(--coklat-tua);
+}
+
+.offcanvas-title{
+    color: var(--emas);
+    font-weight:700;
+}
+
+.offcanvas .nav-link{
+    color: #fff !important;
+    font-size:18px;
+    padding:4px 0;
+}
+
+.offcanvas .nav-link:hover{
+    color: var(--emas) !important;
+}
+
+.offcanvas .nav-link.active{
+    color: var(--emas) !important;
+    font-weight:700;
+}
+
+.offcanvas .btn-close{
+    filter: brightness(0) saturate(100%)
+            invert(95%) sepia(15%)
+            saturate(362%)
+            hue-rotate(328deg)
+            brightness(96%)
+            contrast(92%);
+    opacity: 1;
+}
+
+/* ==========================================================
+   MEMBERI RUANG UNTUK HEADER
+   ========================================================== */
+main {
+    margin-top: 5px;
+}
+
+/* ==========================================================
+   8. HERO
+   ========================================================== */
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.hero__video{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.25);
+}
+/* ==========================================================
+   9. PRODUK
+   ========================================================== */
+.produk {
+    padding: 50px 20px;
+    background: var(--putih);
+}
+
+.produk__container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.produk__title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 700px;
+    color: var(--coklat-tua);
+    margin-bottom: 50px;
+}
+
+.produk__tab {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.produk__button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: var(--tan);
+    color: var(--coklat-teks);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.produk__button:hover {
+    background: var(--emas);
+    color: var(--putih);
+}
+
+.produk__button.active {
+    background: var(--coklat-tua);
+    color: var(--putih);
+}
+
+.produk__content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    gap: 0px;
+    align-items: start;
+    margin-top: 35px;
+}
+
+.produk__image {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.produk__image img {
+    width: 90%;
+    max-width: 520px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.produk__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.produk__description p {
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: justify;
+    max  max-width: 500px;
+}
+
+.product-outline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e7d1ba;
+    padding: 2px 12px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.outline-title h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #6e442d;
+}
+
+.outline-tab {
+    display: flex;
+    gap: 2px;
+}
+
+.tab-btn {
+    border: none;
+    background: transparent;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6e442d;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn:hover {
+    /* background: #c7a889; */
+    color: #4a3320;
+}
+
+.tab-btn.active{
+    font-weight:700;
+    color:var(--coklat-tua);
+}
+/* ==========================================================
+   TENTANG PERUSAHAAN
+   ========================================================== */
+
+.tentang{
+    background: var(--krem);
+    padding: 60px 0;
+}
+
+.tentang__text h2{
+    color: var(--coklat-tua);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.tentang__text p{
+    color: var(--coklat-teks);
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.tentang__image img{
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.site-footer{
+    background: var(--coklat-tua);
+    color: var(--emas);
+    padding: 60px 0 20px;
+}
+
+.site-footer h3{
+    color: var(--emas);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.site-footer h4{
+    color: var(--emas);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.site-footer p{
+    color: var(--emas);
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.site-footer ul{
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li{
+    margin-bottom: 12px;
+}
+
+.site-footer a{
+    color: var(--emas);
+    text-decoration: none;
+    transition: .3s;
+}
+
+.site-footer a:hover{
+    color: var(--emas);
+}
+
+/* ==========================================================
+   SOSIAL MEDIA
+   ========================================================== */
+
+.footer-socials{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-socials a{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.08);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: .3s;
+}
+
+.footer-socials a:hover{
+    background: var(--emas);
+}
+
+.footer-socials i{
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ==========================================================
+   GARIS PEMBATAS
+   ========================================================== */
+
+.footer-divider{
+    border-color: rgba(255,255,255,.15);
+    margin: 40px 0 20px;
+}
+
+/* ==========================================================
+   COPYRIGHT
+   ========================================================== */
+
+.footer-bottom{
+    text-align: center;
+}
+
+.footer-bottom p{
+    margin: 0;
+    font-size: 15px;
+    color: var(--emas);
+}
+
+/* ==========================================================
+   TABLET (≤ 992px)
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+    /* Hero Video */
+    .hero {
+        height: 80vh;
+    }
+
+    /* Produk */
+    .produk__title {
+        font-size: 36px;
+    }
+
+    .produk__content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .produk__image img {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .produk__description {
+        text-align: center;
+    }
+
+    /* Tentang */
+    .tentang__container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tentang__image {
+        order: 1;
+    }
+
+    .tentang__text {
+        order: 2;
+        text-align: left;
+    }
+}
+
+/* ==========================================================
+   MOBILE (≤ 768px)
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* Hero */
+    .hero {
+        height: 65vh;
+        min-height: 350px;
+    }
+
+    /* Judul */
+    .produk__title,
+    .tentang__text h2 {
+        font-size: 30px;
+    }
+
+    /* Deskripsi */
+    .produk__description p,
+    .tentang__text p {
+        font-size: 16px;
+    }
+
+    /* Produk */
+    .produk__image img {
+        max-width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+}
+
+/* ==========================================================
+   MOBILE KECIL (≤ 480px)
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    /* Hero */
+    .hero {
+        height: 45vh;
+        min-height: 280px;
+    }
+
+    /* Judul */
+    .produk__title,
+    .tentang__text h2 {
+        font-size: 26px;
+    }
+
+    /* Paragraf */
+    .produk__description p,
+    .tentang__text p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    /* Footer */
+    .footer p {
+        font-size: 13px;
+    }
+}

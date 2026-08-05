@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplek Sengon - PT Wijaya Plywood Indonesia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    {{-- Boostsrap --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    {{-- css --}}
+    <link rel="stylesheet" href="{{ asset('css/detail-produk.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+
+    <!-- ==================== HEADER / NAVIGASI ==================== -->
+<nav class="navbar navbar-light navbar-custom fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="{{ route('beranda') }}">
+                <img src="{{ asset('images/logo2.png') }}"
+                    alt="Logo"
+                    width="55"
+                    class="me-2">
+                <span class="fw-bold">
+                    PT WIJAYA PLYWOOD<br>
+                    INDONESIA
+                </span>
+            </a>
+            <!-- Tombol Hamburger -->
+            <button
+                class="navbar-toggler border-0 shadow-none"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+            <div
+                class="offcanvas offcanvas-end"
+                tabindex="-1"
+                id="navbarMenu">
+                <div class="offcanvas-header">
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas">
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('beranda') ? 'active' : '' }}"
+                                href="{{ route('beranda') }}">
+                                Beranda
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('tentang-kami') ? 'active' : '' }}"
+                                href="{{ route('tentang-kami') }}">
+                                Tentang Kami
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('produk') ? 'active' : '' }}"
+                                href="{{ route('produk') }}">
+                                Produk
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('kontak') ? 'active' : '' }}"
+                                href="{{ route('kontak') }}">
+                                Kontak
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <main>
+    <!-- ==================== INFO PRODUK ==================== -->
+    <section class="detail-produk py-5">
+        <div class="container">
+            <div class="row align-items-start g-5">
+                <!-- Gambar -->
+                <div class="col-lg-4 col-md-5">
+                    <img
+                        src="{{ asset('images/gambar1.jpeg') }}"
+                        class="img-fluid rounded shadow-sm w-100 detail-produk__img"
+                        alt="Multiplek Sengon">
+                </div>
+                <!-- Deskripsi -->
+                <div class="col-lg-8 col-md-7">
+                    <h1 class="detail-produk__judul fw-bold">
+                        Multiplek Sengon
+                    </h1>
+                    <p class="detail-produk__deskripsi">
+                        Triplek berkualitas unggul yang diproduksi dengan teknologi modern serta melalui pengendalian mutu yang ketat untuk menghasilkan produk yang kuat, stabil, dan tahan lama. Dengan kualitas yang konsisten dan ketepatan spesifikasi, plywood ini menjadi pilihan tepat untuk berbagai kebutuhan konstruksi, pembuatan furnitur, desain interior, hingga aplikasi industri lainnya.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GAMBAR PRODUK ==================== -->
+    <section class="detail-produk__bagian py-5">
+        <div class="container">
+            <h2 class="judul-bagian mb-4">
+                Gambar Produk
+            </h2>
+            <div class="row g-4">
+                <!-- Gambar 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <img
+                        src="{{ asset('images/gambar1.jpeg') }}"
+                        class="detail-produk__gallery img-fluid"
+                        alt="Produk 1">
+                </div>
+                <!-- Gambar 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <img
+                        src="{{ asset('images/gambar2.jpeg') }}"
+                        class="detail-produk__gallery img-fluid"
+                        alt="Produk 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== JENIS APLIKASI ==================== -->
+    <section class="detail-produk__bagian py-5">
+        <div class="container">
+            <h2 class="judul-bagian text-center mb-4">
+                Jenis Aplikasi
+            </h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <p>
+                        Produk yang tahan lama merupakan investasi.
+                    </p>
+                    <p>
+                        Jika Anda mencari material yang tahan lama, awet, dan kuat untuk kebutuhan rumah ataupun konstruksi bangunan, LVL kami adalah solusi sempurna untuk Anda. Selain itu, kami juga menawarkan pilihan anti-rayap untuk melindungi produk dari rayap atau serangga. Anda tidak perlu sering mengganti material rumah karena kerusakan, jamur, dan serangan rayap.
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4 mt-3">
+    <div class="col-lg-4 col-md-6">
+        <img
+            src="{{ asset('images/furnitur1.jpg') }}"
+            class="img-fluid w-100 rounded shadow-sm jenis-aplikasi__gambar"
+            alt="Rak Buku">
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <img
+            src="{{ asset('images/furnitur2.jpg') }}"
+            class="img-fluid w-100 rounded shadow-sm jenis-aplikasi__gambar"
+            alt="Dapur">
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <img
+            src="{{ asset('images/furnitur3.jpg') }}"
+            class="img-fluid w-100 rounded shadow-sm jenis-aplikasi__gambar"
+            alt="Lemari">
+    </div>
+</div>
+        </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <!-- Informasi Perusahaan -->
+                <div class="col-lg-5 col-md-6">
+                    <h3>PT WIJAYA PLYWOOD INDONESIA</h3>
+                    <p>Lawang, Kabupaten Malang, Jawa Timur 65215</p>
+                    <p>
+                        <strong>Telepon:</strong>
+                        +62 838-4694-1680
+                    </p>
+                    <p>
+                        <strong>Email:</strong>
+                        recruitment.wijayaplywood@gmail.com
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Menu -->
+                <div class="col-lg-2 col-md-6">
+                    <h4>Menu</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{{ route('beranda') }}">
+                                Beranda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('tentang-kami') }}">
+                                Tentang Kami
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('produk') }}">
+                                Produk
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('kontak') }}">
+                                Kontak
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Kebijakan -->
+                <div class="col-lg-2 col-md-6">
+                    <h4>Kebijakan</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#">
+                                Kebijakan Privasi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Syarat dan Ketentuan
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Jam Operasional -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>Jam Operasional</h4>
+                    <p>Senin - Sabtu 06.00 - 17.00 WIB</p>
+                    <p class="mt-3">
+                        Minggu : Tutup
+                    </p>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p class="mb-0">
+                    &copy; {{ date('Y') }} PT Wijaya Plywood Indonesia. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

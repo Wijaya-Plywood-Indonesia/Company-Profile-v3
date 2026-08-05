@@ -1,0 +1,447 @@
+/* ---------- 6. PERUSAHAAN KAMI (halaman Tentang Kami) ---------- */
+.perusahaan-kami {
+    padding: 64px 24px 72px;
+}
+
+.perusahaan-kami__judul {
+    text-align: center;
+    color: var(--coklat-tua);
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.perusahaan-kami__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.perusahaan-kami__gambar {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.perusahaan-kami__gambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.perusahaan-kami__teks p {
+    font-size: 18px;
+    color: var(--coklat-teks);
+}
+
+main {
+    padding-top: 90px;
+}
+/* ---------- 7. SEJARAH PERUSAHAAN ---------- */
+.sejarah-perusahaan {
+    background-color: var(--krem);
+    padding: 30px 24px;
+}
+
+.sejarah-perusahaan__judul {
+    text-align: center;
+    color: var(--coklat-tua);
+    font-size: 44px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.sejarah-perusahaan__teks p {
+    font-size: 17px;
+    color: var(--coklat-teks);
+}
+
+.sejarah-perusahaan__gambar img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+/* ==========================================================
+   KOMITMEN PERUSAHAAN
+   ========================================================== */
+.komitmen-perusahaan {
+    padding: 0;
+    margin: 0;
+}
+
+.komitmen-perusahaan__card {
+    position: relative;
+    overflow: hidden;
+}
+
+.komitmen-perusahaan__bg {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.komitmen-perusahaan__overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 40px;
+
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.komitmen-perusahaan__judul {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.komitmen-perusahaan__kutipan {
+    max-width: 800px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #fff;
+    margin: 0;
+}
+
+/* ==========================================================
+   BUDAYA KERJA
+   ========================================================== */
+
+.budaya-kerja {
+    padding: 80px 0;
+    background: var(--putih);
+}
+
+.budaya-kerja__judul {
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--coklat-tua);
+    margin-bottom: 50px;
+}
+
+.budaya-kerja__card {
+    background: #efe3d0;
+    border-radius: 12px;
+    padding: 35px 30px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.budaya-kerja__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.budaya-kerja__card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--coklat-tua);
+    margin-bottom: 18px;
+}
+
+.budaya-kerja__card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--coklat-teks);
+}
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.site-footer {
+    background: var(--coklat-tua);
+    color: var(--emas);
+    padding: 60px 0 20px;
+}
+
+.site-footer h3 {
+    color: var(--emas);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.site-footer h4 {
+    color: var(--emas);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.site-footer p {
+    color: var(--emas);
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.site-footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li {
+    margin-bottom: 12px;
+}
+
+.site-footer a {
+    color: var(--emas);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.site-footer a:hover {
+    color: var(--emas);
+}
+
+/* ==========================================================
+   SOSIAL MEDIA
+   ========================================================== */
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.footer-socials a:hover {
+    background: var(--emas);
+}
+
+.footer-socials i {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ==========================================================
+   GARIS PEMBATAS
+   ========================================================== */
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 40px 0 20px;
+}
+
+/* ==========================================================
+   COPYRIGHT
+   ========================================================== */
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 15px;
+    color: var(--emas);
+}
+/* ==========================================================
+   7. RESPONSIVE - TABLET (max-width: 900px)
+   ========================================================== */
+@media (max-width: 900px) {
+    .produk-unggulan__judul {
+        font-size: 38px;
+    }
+
+    .produk-panel {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .tentang-perusahaan__container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .tentang-perusahaan__gambar {
+        order: -1;
+    }
+
+    .hero__image {
+        height: 480px;
+    }
+
+    .perusahaan-kami__container,
+    .sejarah-perusahaan__container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .sejarah-perusahaan__gambar {
+        order: -1;
+    }
+
+    .budaya-kerja__container {
+        grid-template-columns: 1fr;
+    }
+
+    .komitmen-perusahaan {
+        min-height: 440px;
+    }
+}
+
+/* ==========================================================
+   8. RESPONSIVE - TABLET KECIL / MOBILE BESAR (max-width: 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+    .header__toggle {
+        display: flex;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--coklat-tua);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .header__nav--terbuka {
+        max-height: 300px;
+    }
+
+    .header__nav-list {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 32px 20px;
+    }
+
+    .header__nav-list li {
+        border-top: 1px solid rgba(239, 227, 208, 0.15);
+    }
+
+    .header__nav-link {
+        display: block;
+        padding: 14px 0;
+    }
+
+    .produk-unggulan__judul {
+        font-size: 32px;
+    }
+
+    .produk-tab-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero__image {
+        height: 380px;
+    }
+
+    .perusahaan-kami__judul,
+    .sejarah-perusahaan__judul,
+    .budaya-kerja__judul {
+        font-size: 32px;
+    }
+
+    .komitmen-perusahaan__judul {
+        font-size: 24px;
+    }
+
+    .komitmen-perusahaan__kutipan {
+        font-size: 18px;
+    }
+}
+
+/* ==========================================================
+   9. RESPONSIVE - MOBILE (max-width: 480px)
+   ========================================================== */
+@media (max-width: 480px) {
+    .header__container {
+        padding: 14px 20px;
+    }
+
+    .header__logo-text {
+        font-size: 9px;
+    }
+
+    .produk-unggulan {
+        padding: 48px 16px 56px;
+    }
+
+    .produk-unggulan__judul {
+        font-size: 26px;
+        margin-bottom: 28px;
+    }
+
+    .produk-tab-bar {
+        padding: 16px 20px;
+    }
+
+    .produk-tab-bar__label {
+        font-size: 18px;
+    }
+
+    .produk-tab-bar__tombol-item {
+        font-size: 15px;
+    }
+
+    .tentang-perusahaan {
+        padding: 48px 16px;
+    }
+
+    .tentang-perusahaan__judul {
+        font-size: 26px;
+    }
+
+    .hero__image {
+        height: 280px;
+    }
+
+    .perusahaan-kami,
+    .sejarah-perusahaan,
+    .budaya-kerja {
+        padding: 48px 16px 56px;
+    }
+
+    .perusahaan-kami__judul,
+    .sejarah-perusahaan__judul,
+    .budaya-kerja__judul {
+        font-size: 26px;
+        margin-bottom: 28px;
+    }
+
+    .komitmen-perusahaan {
+        min-height: 360px;
+    }
+
+    .komitmen-perusahaan__judul {
+        font-size: 20px;
+    }
+
+    .komitmen-perusahaan__kutipan {
+        font-size: 16px;
+    }
+}
