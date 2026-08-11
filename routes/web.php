@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ProdukController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -14,13 +16,11 @@ Route::get('/tentang-kami', function () {
     return view('pages.tentang-kami');
 })->name('tentang-kami');
 
-Route::get('/produk', function () {
-    return view('pages.produk');
-})->name('produk');
+Route::get('/produk', [ProdukController::class, 'index'])
+    ->name('produk');
 
-Route::get('/detail-produk', function () {
-    return view('pages.detail-produk');
-})->name('detail-produk');
+Route::get('/produk/{id}', [ProdukController::class, 'show'])
+    ->name('detail-produk');
 
 Route::get('/kontak', function () {
     return view('pages.kontak');

@@ -97,71 +97,47 @@
             <p class="daftar-produk__subjudul text-center mb-5">
                 Tersedia berbagai macam produk kayu berkualitas
             </p>
-            <div class="row g-4">
-                <!-- Produk 1 -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="kartu-produk h-100">
-                        <a href="{{ route('detail-produk') }}" class="text-decoration-none">
-                            <img
-                                src="{{ asset('images/gambar1.jpeg') }}"
-                                class="kartu-produk__gambar img-fluid"
-                                alt="Multiplek Sengon">
-                            <div class="kartu-produk__isi">
-                                <h2 class="kartu-produk__judul">
-                                    Multiplek Sengon
-                                </h2>
-                                <p class="kartu-produk__teks">
-                                    Triplek kualitas unggul yang diproses menggunakan teknologi modern sehingga memiliki daya tahan tinggi untuk berbagai kebutuhan konstruksi maupun furnitur.
-                                </p>
-                            </div>
+            <div class="row g-4 justify-content-center">
+                @foreach($produks as $produk)
+                    <div class="col-lg-4 col-md-6">
+
+                        <a href="{{ route('detail-produk', $produk->id) }}"
+                        class="text-decoration-none text-dark">
+
+                            <article class="kartu-produk h-100">
+
+                                <img
+                                    src="{{ asset('storage/' . $produk->gambar_utama) }}"
+                                    class="kartu-produk__gambar img-fluid"
+                                    alt="{{ $produk->nama_produk }}"
+                                    loading="lazy">
+
+                                <div class="kartu-produk__isi">
+                                    <h2 class="kartu-produk__judul">
+                                        {{ $produk->nama_produk }}
+                                    </h2>
+
+                                    <p class="kartu-produk__teks">
+                                        {{ Str::limit(strip_tags($produk->deskripsi), 80) }}
+                                    </p>
+                                    <a href="{{ route('detail-produk', $produk->id) }}" class="btn btn-outline-light mt-3">
+                                        Lihat Detail
+                                    </a>
+                                </div>
+
+                            </article>
+
                         </a>
-                    </article>
-                </div>
-                <!-- Produk 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="kartu-produk h-100">
-                        {{-- <a href="{{ route('detail-produk') }}" class="text-decoration-none"> --}}
-                            <img
-                                src="{{ asset('images/gambar2.jpeg') }}"
-                                class="kartu-produk__gambar img-fluid"
-                                alt="Multiplek Semi">
-                            <div class="kartu-produk__isi">
-                                <h2 class="kartu-produk__judul">
-                                    Multiplek Semi
-                                </h2>
-                                <p class="kartu-produk__teks">
-                                    Diproduksi menggunakan bahan baku pilihan dengan kualitas yang stabil sehingga cocok digunakan untuk berbagai kebutuhan industri.
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <!-- Produk 3 -->
-                <div class="col-lg-4 col-md-6">
-                    <article class="kartu-produk h-100">
-                        {{-- <a href="{{ route('detail-produk') }}" class="text-decoration-none"> --}}
-                            <img
-                                src="{{ asset('images/tentang1.jpg') }}"
-                                class="kartu-produk__gambar img-fluid"
-                                alt="Triplek Blokmin">
-                            <div class="kartu-produk__isi">
-                                <h2 class="kartu-produk__judul">
-                                    Triplek Blokmin
-                                </h2>
-                                <p class="kartu-produk__teks">
-                                    Produk plywood berkualitas tinggi yang dirancang untuk memberikan kekuatan, stabilitas, dan ketahanan dalam berbagai kondisi penggunaan.
-                                </p>
-                            </div>
-                        </a>
-                    </article>
-                </div>
+
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
 
-  </main>
+    </main>
 
-  <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
         <div class="container">
             <div class="row gy-4">
@@ -252,8 +228,8 @@
         </div>
     </footer>
 
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>

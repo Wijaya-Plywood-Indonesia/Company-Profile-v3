@@ -87,7 +87,7 @@
         <!-- ================= HERO ================= -->
         <section class="hero position-relative overflow-hidden">
             <video class="hero__video" autoplay muted loop playsinline>
-                <source src="{{ asset('video/hero.mp4') }}" type="video/mp4">
+                <source src="{{ asset('video/0810(2).mp4') }}" type="video/mp4">
                 Browser Anda tidak mendukung video.
             </video>
             <div class="hero__overlay"></div>
@@ -106,23 +106,22 @@
                     </div>
                 </div>
                 <!-- Konten -->
-                <div class="row align-items-start g-4">
-                    <div class="col-lg-5">
+                <div class="row align-items-start">
+                    <div class="col-lg-6">
                         <div class="produk__image">
                             <img
                                 id="produk-img"
                                 src="{{ asset('images/gambar1.jpeg') }}"
                                 class="img-fluid rounded"
-                                alt="Plywood">
+                                alt="Plywood"
+                                loading="lazy">
                         </div>
                     </div>
-                    <div class="col-lg-7">
+
+                    <div class="col-lg-6">
                         <div class="produk__description">
                             <p id="produk-deskripsi">
-                                Plywood diproduksi dari lapisan kayu pilihan yang diproses
-                                menggunakan teknologi modern sehingga menghasilkan produk
-                                yang kuat, stabil, dan berkualitas tinggi untuk berbagai
-                                kebutuhan konstruksi maupun furnitur.
+                                Plywood tersusun dari beberapa lapisan kayu tipis yang direkatkan menjadi satu lembaran. Konstruksinya membuat plywood kuat dan stabil, sehingga dapat digunakan sebagai material untuk berbagai kebutuhan furniture dan produk berbahan kayu.
                             </p>
                         </div>
                     </div>
@@ -139,15 +138,17 @@
                             Tentang Perusahaan
                         </h2>
                         <p class="tentang__text">
-                            Kami adalah perusahaan manufaktur kayu lapis yang memproduksi plywood berkualitas tinggi dengan ketepatan spesifikasi dan kontrol mutu yang ketat serta didukung teknologi modern dan proses yang ramah lingkungan.
+                            Kami menyediakan plywood yang dapat digunakan untuk berbagai kebutuhan furniture, mulai dari pembuatan meja, lemari, rak, hingga beragam produk furniture lainnya. Setiap produk diproses dengan memperhatikan ketepatan spesifikasi dan konsistensi kualitas agar dapat menjadi material yang sesuai dengan kebutuhan produksi.
+                            Dengan proses produksi dan kontrol mutu yang dilakukan secara konsisten, kami terus menjaga kualitas plywood yang dihasilkan sehingga dapat mendukung berbagai kebutuhan furniture dengan hasil yang dapat diandalkan.
                         </p>
                     </div>
                     <!-- Gambar -->
                     <div class="col-lg-6 order-1 order-lg-2">
                         <img
-                            src="{{ asset('images/gambar2.jpeg') }}"
+                            src="{{ asset('images/pabrik1.jpg') }}"
                             class="img-fluid rounded"
-                            alt="Tentang Perusahaan">
+                            alt="Tentang Perusahaan"
+                            loading="lazy">
                     </div>
                 </div>
             </div>

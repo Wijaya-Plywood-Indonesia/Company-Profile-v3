@@ -20,15 +20,15 @@ const deskripsi = document.getElementById("produk-deskripsi");
 btnPlywood.addEventListener("click", function () {
     gambar.src = "/images/gambar1.jpeg";
     deskripsi.textContent =
-        "Plywood diproduksi dari lapisan kayu pilihan yang diproses menggunakan teknologi modern sehingga menghasilkan produk yang kuat dan berkualitas tinggi.";
+        "Plywood tersusun dari beberapa lapisan kayu tipis yang direkatkan menjadi satu lembaran. Konstruksinya membuat plywood kuat dan stabil, sehingga dapat digunakan sebagai material untuk berbagai kebutuhan furniture dan produk berbahan kayu.";
     btnPlywood.classList.add("active");
     btnVeneer.classList.remove("active");
 });
 
 btnVeneer.addEventListener("click", function () {
-    gambar.src = "/images/gambar2.jpeg";
+    gambar.src = "/images/tentang1.jpg";
     deskripsi.textContent =
-        "Veneer merupakan lembaran kayu tipis berkualitas tinggi yang digunakan sebagai bahan utama maupun pelapis pada industri furnitur dan konstruksi.";
+        "Veneer berupa lembaran kayu tipis yang diperoleh melalui proses pengupasan atau pengirisan kayu. Selain menjadi salah satu bahan penyusun plywood, veneer juga dapat digunakan sebagai lapisan permukaan untuk memberikan tampilan serat kayu yang alami pada furniture.";
     btnVeneer.classList.add("active");
     btnPlywood.classList.remove("active");
 });

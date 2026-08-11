@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiplek Sengon - PT Wijaya Plywood Indonesia</title>
+    <title>PT Wijaya Plywood Indonesia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     {{-- Boostsrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
 
     {{-- css --}}
     <link rel="stylesheet" href="{{ asset('css/detail-produk.css') }}">
@@ -88,96 +89,81 @@
 
     <main>
     <!-- ==================== INFO PRODUK ==================== -->
-    <section class="detail-produk py-5">
-        <div class="container">
-            <div class="row align-items-start g-5">
-                <!-- Gambar -->
-                <div class="col-lg-4 col-md-5">
+    <section class="detail-produk">
+    <div class="container">
+        <div class="row align-items-start g-5">
+
+            <!-- Gambar -->
+            <div class="col-lg-4 col-md-5 ps-0">
+                <a href="{{ asset('storage/' . $produk->gambar_utama) }}" class="glightbox">
                     <img
-                        src="{{ asset('images/gambar1.jpeg') }}"
+                        src="{{ asset('storage/' . $produk->gambar_utama) }}"
                         class="img-fluid rounded shadow-sm w-100 detail-produk__img"
-                        alt="Multiplek Sengon">
-                </div>
-                <!-- Deskripsi -->
-                <div class="col-lg-8 col-md-7">
-                    <h1 class="detail-produk__judul fw-bold">
-                        Multiplek Sengon
-                    </h1>
-                    <p class="detail-produk__deskripsi">
-                        Triplek berkualitas unggul yang diproduksi dengan teknologi modern serta melalui pengendalian mutu yang ketat untuk menghasilkan produk yang kuat, stabil, dan tahan lama. Dengan kualitas yang konsisten dan ketepatan spesifikasi, plywood ini menjadi pilihan tepat untuk berbagai kebutuhan konstruksi, pembuatan furnitur, desain interior, hingga aplikasi industri lainnya.
-                    </p>
-                </div>
+                        alt="{{ $produk->nama_produk }}"
+                        loading="lazy">
+                </a>
             </div>
+
+            <!-- Deskripsi -->
+            <div class="col-lg-8 col-md-7">
+                <h1 class="detail-produk__judul fw-bold">
+                    {{ $produk->nama_produk }}
+                </h1>
+
+                <p class="detail-produk__deskripsi">
+                    {{ $produk->deskripsi }}
+                </p>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- ==================== GAMBAR PRODUK ==================== -->
-    <section class="detail-produk__bagian py-5">
+    <section class="detail-produk__bagian py-4">
         <div class="container">
             <h2 class="judul-bagian mb-4">
                 Gambar Produk
             </h2>
-            <div class="row g-4">
-                <!-- Gambar 1 -->
-                <div class="col-lg-4 col-md-6">
+            @if($produk->galeri)
+        <div class="d-flex flex-wrap gap-4">
+        @foreach($produk->galeri as $gambar)
+            <div>
+                <a href="{{ asset('storage/' . $gambar) }}" class="glightbox">
                     <img
-                        src="{{ asset('images/gambar1.jpeg') }}"
-                        class="detail-produk__gallery img-fluid"
-                        alt="Produk 1">
-                </div>
-                <!-- Gambar 2 -->
-                <div class="col-lg-4 col-md-6">
-                    <img
-                        src="{{ asset('images/gambar2.jpeg') }}"
-                        class="detail-produk__gallery img-fluid"
-                        alt="Produk 2">
-                </div>
+                        src="{{ asset('storage/' . $gambar) }}"
+                        class="detail-produk__gallery"
+                        alt="{{ $produk->nama_produk }}"
+                        loading="lazy">
+                </a>
+                <p class="galeri-item__label">
+                    @if($loop->index == 0)
+                        Tampak Samping
+                    @elseif($loop->index == 1)
+                        Tampak Atas
+                    @elseif($loop->index == 2)
+                        Tampak Depan
+                    @endif
+                </p>
             </div>
+        @endforeach
+        </div>
+        @endif
         </div>
     </section>
 
-    <!-- ==================== JENIS APLIKASI ==================== -->
+    <!-- ==================== JENIS Penggunaan ==================== -->
     <section class="detail-produk__bagian py-5">
         <div class="container">
             <h2 class="judul-bagian text-center mb-4">
-                Jenis Aplikasi
+                Jenis Penggunaan
             </h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <p>
-                        Produk yang tahan lama merupakan investasi.
-                    </p>
-                    <p>
-                        Jika Anda mencari material yang tahan lama, awet, dan kuat untuk kebutuhan rumah ataupun konstruksi bangunan, LVL kami adalah solusi sempurna untuk Anda. Selain itu, kami juga menawarkan pilihan anti-rayap untuk melindungi produk dari rayap atau serangga. Anda tidak perlu sering mengganti material rumah karena kerusakan, jamur, dan serangan rayap.
-                    </p>
-                </div>
+            <div class="penggunaan-produk">
+                {!! $produk->penggunaan !!}
             </div>
-            <div class="row g-4 mt-3">
-    <div class="col-lg-4 col-md-6">
-        <img
-            src="{{ asset('images/furnitur1.jpg') }}"
-            class="img-fluid w-100 rounded shadow-sm jenis-aplikasi__gambar"
-            alt="Rak Buku">
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-        <img
-            src="{{ asset('images/furnitur2.jpg') }}"
-            class="img-fluid w-100 rounded shadow-sm jenis-aplikasi__gambar"
-            alt="Dapur">
-    </div>
-
-    <div class="col-lg-4 col-md-6">
-        <img
-            src="{{ asset('images/furnitur3.jpg') }}"
-            class="img-fluid w-100 rounded shadow-sm jenis-aplikasi__gambar"
-            alt="Lemari">
-    </div>
-</div>
         </div>
     </section>
-
-  </main>
+    </main>
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="site-footer">
@@ -272,6 +258,50 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.penggunaan-produk img').forEach(function (img) {
+                // Lewati jika sudah dibungkus
+                if (img.parentElement.tagName.toLowerCase() !== 'a') {
+                    const link = document.createElement('a');
+                    link.href = img.src;
+                    link.classList.add('glightbox');
+
+                    img.parentNode.insertBefore(link, img);
+                    link.appendChild(img);
+                }
+            });
+            GLightbox();
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const gambar = document.querySelectorAll('.penggunaan-produk img');
+
+            gambar.forEach(function (img) {
+                const alt = img.getAttribute('alt');
+
+                if (!alt) return;
+
+                const wrapper = document.createElement('div');
+                wrapper.classList.add('penggunaan-produk__item');
+
+                img.parentNode.insertBefore(wrapper, img);
+
+                wrapper.appendChild(img);
+
+                const label = document.createElement('p');
+                label.classList.add('penggunaan-produk__label');
+                label.textContent = alt;
+
+                wrapper.appendChild(label);
+            });
+        });
+    </script>
 
 </body>
 </html>

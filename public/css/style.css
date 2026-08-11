@@ -141,6 +141,35 @@ ul {
     opacity: 1;
 }
 
+.navbar-custom .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.navbar-custom .navbar-brand {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    margin-right: 10px;
+}
+
+.navbar-custom .navbar-brand img {
+    flex-shrink: 0;
+}
+
+.navbar-custom .navbar-brand span {
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.navbar-custom .navbar-toggler {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
 /* ==========================================================
    MEMBERI RUANG UNTUK HEADER
    ========================================================== */
@@ -233,6 +262,8 @@ main {
 .produk__image {
     display: flex;
     justify-content: flex-start;
+    margin: 0;
+    padding: 0;
 }
 
 .produk__image img {
@@ -247,6 +278,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin: 0;
+    padding: 0;
 }
 
 .produk__description p {
@@ -540,5 +573,25 @@ main {
     /* Footer */
     .footer p {
         font-size: 13px;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .navbar-custom .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .navbar-custom .navbar-brand img {
+        width: 45px;
+    }
+
+    .navbar-custom .navbar-brand span {
+        font-size: 11px;
+    }
+
+    .navbar-custom .navbar-toggler {
+        padding: 4px;
     }
 }

@@ -100,16 +100,19 @@
                 <div class="col-lg-6">
                     <div class="perusahaan-kami__gambar">
                         <img
-                            src="{{ asset('images/tentang1.jpg') }}"
+                            src="{{ asset('images/IMG_8305v1.jpg') }}"
                             alt="Lembaran veneer kayu"
-                            class="img-fluid rounded">
+                            class="img-fluid rounded"
+                            loading="lazy">
                     </div>
                 </div>
                 <!-- Deskripsi -->
                 <div class="col-lg-6">
                     <div class="perusahaan-kami__teks">
                         <p>
-                            Perusahaan kami bergerak di bidang industri pengolahan kayu dengan fokus pada produksi plywood dan veneer berkualitas. Dengan mengutamakan kualitas, ketepatan proses, dan kepuasan pelanggan, kami berkomitmen menghadirkan produk yang mampu memenuhi kebutuhan pasar domestik maupun internasional.
+                            PT Wijaya Plywood Indonesia berfokus pada pengolahan kayu dengan menghasilkan plywood dan veneer yang sesuai dengan kebutuhan pelanggan. Dengan mengutamakan kualitas, ketepatan proses, dan kepuasan pelanggan, kami terus menjaga konsistensi dalam setiap proses untuk menghasilkan produk yang dapat memenuhi kebutuhan pasar.
+                            
+                            Dalam menjalankan setiap kegiatan, kami terus berupaya meningkatkan proses kerja dan menjaga standar yang telah ditetapkan. Pengembangan yang dilakukan secara bertahap menjadi bagian dari upaya kami untuk mempertahankan kualitas, meningkatkan keandalan, serta memberikan hasil yang sesuai dengan kebutuhan pelanggan.
                         </p>
                     </div>
                 </div>
@@ -127,14 +130,7 @@
                 <div class="col-lg-6 order-2 order-lg-1">
                     <div class="sejarah-perusahaan__teks">
                         <p>
-                            PT Wijaya Plywood Indonesia berdiri sejak tahun 2022 dan menjadi
-                            pelopor industri triplek di Malang, Jawa Timur. Kami terus
-                            berinovasi menghadirkan produk berkualitas tinggi dengan proses
-                            yang efisien dan ramah lingkungan. Setiap produk kami dibuat untuk
-                            memenuhi standar mutu dan keandalan untuk kebutuhan konstruksi dan
-                            furnitur. Setiap lembar triplek diproduksi melalui proses
-                            pengawasan ketat untuk memastikan ketahanan, presisi, dan kualitas
-                            terbaik bagi pelanggan kami.
+                            PT Wijaya Plywood Indonesia berdiri sejak tahun 2022 dan menjadi salah satu pelopor pengolahan kayu lapis di Lawang, Jawa Timur. Kami terus mengembangkan proses kerja untuk menghadirkan produk berkualitas dengan proses yang efisien dan terkontrol. Setiap produk kami dibuat dengan memperhatikan standar mutu dan keandalan untuk memenuhi kebutuhan furniture. Setiap lembar kayu lapis melalui proses pengawasan yang dilakukan secara cermat untuk memastikan kualitas yang tepat. 
                         </p>
                     </div>
                 </div>
@@ -142,9 +138,10 @@
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="sejarah-perusahaan__gambar">
                         <img
-                            src="{{ asset('images/tentang2.jpg') }}"
+                            src="{{ asset('images/sejarahv2.jpg') }}"
                             alt="Sejarah Perusahaan"
-                            class="img-fluid rounded">
+                            class="img-fluid rounded"
+                            loading="lazy">
                     </div>
                 </div>
             </div>
@@ -157,7 +154,8 @@
             <img
                 src="{{ asset('images/komitmen.jpg') }}"
                 alt="Komitmen Perusahaan"
-                class="komitmen-perusahaan__bg">
+                class="komitmen-perusahaan__bg"
+                loading="lazy">
             <div class="komitmen-perusahaan__overlay">
                 <h2 class="komitmen-perusahaan__judul">
                     Komitmen Perusahaan

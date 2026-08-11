@@ -19,10 +19,9 @@
     gap: 48px;
     align-items: flex-start;
 }
-
 .perusahaan-kami__gambar {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 400px;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -31,8 +30,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
-
 .perusahaan-kami__teks p {
     font-size: 18px;
     color: var(--coklat-teks);
@@ -44,7 +43,7 @@ main {
 /* ---------- 7. SEJARAH PERUSAHAAN ---------- */
 .sejarah-perusahaan {
     background-color: var(--krem);
-    padding: 30px 24px;
+    padding: 30px 24px 0;
 }
 
 .sejarah-perusahaan__judul {
@@ -62,6 +61,7 @@ main {
 
 .sejarah-perusahaan__gambar img {
     width: 100%;
+    height: 450px;
     border-radius: 12px;
     display: block;
 }
@@ -70,10 +70,9 @@ main {
    KOMITMEN PERUSAHAAN
    ========================================================== */
 .komitmen-perusahaan {
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
 }
-
 .komitmen-perusahaan__card {
     position: relative;
     overflow: hidden;
@@ -81,7 +80,7 @@ main {
 
 .komitmen-perusahaan__bg {
     width: 100%;
-    height: 420px;
+    height: 520px;
     object-fit: cover;
     display: block;
 }
