@@ -145,7 +145,7 @@
                     <!-- Gambar -->
                     <div class="col-lg-6 order-1 order-lg-2">
                         <img
-                            src="{{ asset('images/pabrik2v.png') }}"
+                            src="{{ asset('images/pabrik3v.png') }}"
                             class="img-fluid rounded"
                             alt="Tentang Perusahaan"
                             loading="lazy">
