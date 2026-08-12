@@ -6,6 +6,7 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Repeater;
 
 class ProdukForm
 {
@@ -57,6 +58,28 @@ class ProdukForm
                         ])
                         ->fileAttachmentsDisk('public')
                         ->fileAttachmentsDirectory('produk')
+                        ->columnSpanFull(),
+                    Repeater::make('spesifikasi')
+                        ->label('Spesifikasi Produk')
+                        ->schema([
+                            TextInput::make('ukuran')
+                                ->label('Ukuran')
+                                ->placeholder('Contoh: 1220 x 2440 mm')
+                                ->required(),
+
+                            TextInput::make('berat')
+                                ->label('Berat')
+                                ->placeholder('Contoh: 18 kg')
+                                ->required(),
+
+                            TextInput::make('tebal')
+                                ->label('Tebal')
+                                ->placeholder('Contoh: 12 mm')
+                                ->required(),
+                        ])
+                        ->columns(3)
+                        ->addActionLabel('Tambah Spesifikasi')
+                        ->collapsible()
                         ->columnSpanFull(),
         ]);
 }

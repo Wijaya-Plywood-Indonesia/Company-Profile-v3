@@ -12,9 +12,11 @@ class Produks extends Model
     'gambar_utama',
     'galeri',
     'penggunaan',
+    'spesifikasi',
 ];
 
     protected $casts = [
         'galeri' => 'array',
+        'spesifikasi' => 'array',
     ];
 }

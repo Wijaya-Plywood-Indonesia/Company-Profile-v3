@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hubungi Kami - PT Wijaya Plywood Indonesia</title>
+    <title>PT Wijaya Plywood Indonesia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -89,7 +89,7 @@
     <main>
         <!-- ==================== KARTU INFORMASI KONTAK ==================== -->
         <!-- Hero -->
-        <section class="kontak-hero py-5">
+        <section class="kontak-hero">
             <div class="container text-center">
                 <h1 class="kontak-hero__judul">
                     Hubungi Kami
@@ -100,7 +100,7 @@
             </div>
         </section>
         <!-- Card Kontak -->
-        <section class="kontak-kartu py-5">
+        <section class="kontak-kartu">
             <div class="container">
                 <div class="row g-4 justify-content-center">
                     <!-- Alamat -->

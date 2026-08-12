@@ -14,8 +14,8 @@ class ProduksTable
 {
     public static function configure(Table $table): Table
     {
-        return $table
-            ->columns([
+    return $table
+        ->columns([
     ImageColumn::make('gambar_utama')
         ->label('Gambar')
         ->square(),
@@ -34,18 +34,18 @@ class ProduksTable
         ->label('Diubah')
         ->date('d M Y')
         ->sortable(),
-])
-            ->filters([
-                //
-            ])
-            ->recordActions([
-                EditAction::make(),
-                DeleteAction::make(),
-            ])
-            ->toolbarActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
-                ]),
-            ]);
+    ])
+        ->filters([
+            //
+        ])
+        ->recordActions([
+        EditAction::make(),
+            DeleteAction::make(),
+        ])
+        ->toolbarActions([
+            BulkActionGroup::make([
+            DeleteBulkAction::make(),
+            ]),
+        ]);
     }
 }

@@ -19,7 +19,7 @@
 <body>
 
     <!-- ==================== HEADER / NAVIGASI ==================== -->
-<nav class="navbar navbar-light navbar-custom fixed-top">
+    <nav class="navbar navbar-light navbar-custom fixed-top">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand d-flex align-items-center" href="{{ route('beranda') }}">
@@ -90,34 +90,58 @@
     <main>
     <!-- ==================== INFO PRODUK ==================== -->
     <section class="detail-produk">
-    <div class="container">
-        <div class="row align-items-start g-5">
-
-            <!-- Gambar -->
-            <div class="col-lg-4 col-md-5 ps-0">
-                <a href="{{ asset('storage/' . $produk->gambar_utama) }}" class="glightbox">
-                    <img
-                        src="{{ asset('storage/' . $produk->gambar_utama) }}"
-                        class="img-fluid rounded shadow-sm w-100 detail-produk__img"
-                        alt="{{ $produk->nama_produk }}"
-                        loading="lazy">
-                </a>
+        <div class="container">
+            <div class="row align-items-start g-5">
+                <!-- Gambar -->
+                <div class="col-lg-4 col-md-5">
+                    <a href="{{ asset('storage/' . $produk->gambar_utama) }}" class="glightbox">
+                        <img
+                            src="{{ asset('storage/' . $produk->gambar_utama) }}"
+                            class="img-fluid rounded shadow-sm w-100 detail-produk__img"
+                            alt="{{ $produk->nama_produk }}"
+                            loading="lazy">
+                    </a>
+                </div>
+                <!-- Deskripsi -->
+                <div class="col-lg-8 col-md-7">
+                    <h1 class="detail-produk__judul fw-bold">
+                        {{ $produk->nama_produk }}
+                    </h1>
+                    <p class="detail-produk__deskripsi">
+                        {{ $produk->deskripsi }}
+                    </p>
+                </div>
             </div>
-
-            <!-- Deskripsi -->
-            <div class="col-lg-8 col-md-7">
-                <h1 class="detail-produk__judul fw-bold">
-                    {{ $produk->nama_produk }}
-                </h1>
-
-                <p class="detail-produk__deskripsi">
-                    {{ $produk->deskripsi }}
-                </p>
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
+
+    {{-- ==================== SPESIFIKASI PRODUK ==================== --}}
+    @if(!empty($produk->spesifikasi))
+        <section class="detail-produk__bagian detail-produk__spesifikasi">
+            <div class="container">
+                <div class="spesifikasi-produk">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ukuran</th>
+                                <th>Berat</th>
+                                <th>Tebal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($produk->spesifikasi as $item)
+                                <tr>
+                                    <td>{{ $item['ukuran'] ?? '-' }}</td>
+                                    <td>{{ $item['berat'] ?? '-' }}</td>
+                                    <td>{{ $item['tebal'] ?? '-' }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    @endif
 
     <!-- ==================== GAMBAR PRODUK ==================== -->
     <section class="detail-produk__bagian py-4">
@@ -126,32 +150,31 @@
                 Gambar Produk
             </h2>
             @if($produk->galeri)
-        <div class="d-flex flex-wrap gap-4">
-        @foreach($produk->galeri as $gambar)
-            <div>
-                <a href="{{ asset('storage/' . $gambar) }}" class="glightbox">
-                    <img
-                        src="{{ asset('storage/' . $gambar) }}"
-                        class="detail-produk__gallery"
-                        alt="{{ $produk->nama_produk }}"
-                        loading="lazy">
-                </a>
-                <p class="galeri-item__label">
-                    @if($loop->index == 0)
-                        Tampak Samping
-                    @elseif($loop->index == 1)
-                        Tampak Atas
-                    @elseif($loop->index == 2)
-                        Tampak Depan
-                    @endif
-                </p>
-            </div>
-        @endforeach
-        </div>
-        @endif
+                <div class="galeri-produk">
+                    @foreach($produk->galeri as $gambar)
+                        <div class="galeri-item">
+                            <a href="{{ asset('storage/' . $gambar) }}" class="glightbox">
+                                <img
+                                    src="{{ asset('storage/' . $gambar) }}"
+                                    class="detail-produk__gallery"
+                                    alt="{{ $produk->nama_produk }}"
+                                    loading="lazy">
+                            </a>
+                            <p class="galeri-item__label">
+                                @if($loop->index == 0)
+                                    Tampak Samping
+                                @elseif($loop->index == 1)
+                                    Tampak Atas
+                                @elseif($loop->index == 2)
+                                    Tampak Depan
+                                @endif
+                            </p>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
         </div>
     </section>
-
     <!-- ==================== JENIS Penggunaan ==================== -->
     <section class="detail-produk__bagian py-5">
         <div class="container">
@@ -165,8 +188,8 @@
     </section>
     </main>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="site-footer">
+    <!-- ==================== FOOTER ==================== -->
+    <footer footer class="site-footer">
         <div class="container">
             <div class="row gy-4">
                 <!-- Informasi Perusahaan -->
@@ -270,7 +293,6 @@
                     const link = document.createElement('a');
                     link.href = img.src;
                     link.classList.add('glightbox');
-
                     img.parentNode.insertBefore(link, img);
                     link.appendChild(img);
                 }
@@ -281,27 +303,20 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const gambar = document.querySelectorAll('.penggunaan-produk img');
-
             gambar.forEach(function (img) {
                 const alt = img.getAttribute('alt');
-
                 if (!alt) return;
-
                 const wrapper = document.createElement('div');
                 wrapper.classList.add('penggunaan-produk__item');
-
                 img.parentNode.insertBefore(wrapper, img);
-
                 wrapper.appendChild(img);
-
                 const label = document.createElement('p');
                 label.classList.add('penggunaan-produk__label');
                 label.textContent = alt;
-
                 wrapper.appendChild(label);
             });
         });
     </script>
-
+    
 </body>
 </html>

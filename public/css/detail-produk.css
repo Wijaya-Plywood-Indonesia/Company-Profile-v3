@@ -4,6 +4,7 @@
     padding-bottom: 30px; /* diperkecil */
     overflow: hidden;
 }
+
 .detail-produk__container {
     max-width: 1200px;
     width: 100%;
@@ -15,7 +16,7 @@
 }
 
 main {
-    padding-top: 90px;
+    padding-top: 60px;
 }
 
 .detail-produk__gambar {
@@ -48,7 +49,7 @@ main {
     color: var(--coklat-teks);
     font-size: 18px;
     line-height: 1.7;
-    text-align: left;
+    text-align: justify;
 
     /* mencegah teks keluar dari container */
     overflow-wrap: break-word;
@@ -72,12 +73,63 @@ main {
     margin-bottom: 32px;
 }
 
-/* Galeri gambar produk (2 gambar) */
+/*  ==========================================
+    SPESIFIKASI PRODUK
+    ========================================== */
+
+.detail-produk__spesifikasi {
+    padding-top: 24px;
+    padding-bottom: 56px;
+}
+
+.spesifikasi-produk {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.spesifikasi-produk table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--putih);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2d5c5;
+}
+
+.spesifikasi-produk th {
+    background-color: var(--coklat-tua);
+    color: var(--putih);
+    padding: 14px 18px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.spesifikasi-produk td {
+    padding: 14px 18px;
+    text-align: center;
+    color: var(--coklat-teks);
+    font-size: 16px;
+    border-bottom: 1px solid #e2d5c5;
+}
+
+.spesifikasi-produk tr:last-child td {
+    border-bottom: none;
+}
+
+.spesifikasi-produk tbody tr:nth-child(even) {
+    background-color: var(--krem);
+}
+
+/*  ==========================================
+    Galeri PRODUK
+    ========================================== */
 .galeri-produk {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 300px);
     gap: 32px;
-    max-width: 400px;
+    width: max-content;
+    max-width: 100%;
 }
 
 .galeri-produk__gambar {
@@ -109,7 +161,7 @@ main {
     width: 100%;
     max-width: 300px;
     height: 220px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     display: block;
     margin: 0;
@@ -117,12 +169,13 @@ main {
 }
 
 .galeri-item {
+    width: 300px;
     text-align: center;
 }
 
 .galeri-item__label {
-    margin-top: 10px;
-    margin-bottom: 0;
+    width: 100%;
+    margin: 8px 0 0;
     text-align: center;
     font-size: 15px;
     font-weight: 600;
@@ -184,8 +237,31 @@ main {
     display: block;
     width: 100%;
     margin-bottom: 16px;
+    text-align: justify;
 }
 
+/* DESKRIPSI */
+.penggunaan-produk .deskripsi-penggunaan {
+    text-align: justify !important;
+    line-height: 1.8;
+}
+
+/* ITEM GAMBAR */
+.penggunaan-produk__item {
+    text-align: center;
+}
+
+/* GAMBAR */
+.penggunaan-produk__item img {
+    display: block !important;
+    margin: 4px auto 8px !important;
+}
+
+/* LABEL */
+.penggunaan-produk__label {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
 /* ---------- 13. FOOTER ---------- */
 .footer {
     background-color: var(--coklat-tua);
@@ -261,15 +337,52 @@ main {
         margin: 0 auto 25px;
     }
 
+    .galeri-produk {
+        width: 100%;
+        max-width: 632px;
+        margin: 0 auto;
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .galeri-item {
+        width: 300px;
+    }
+
+    .detail-produk__gallery {
+        width: 300px;
+        max-width: 100%;
+        height: 220px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
     .jenis-aplikasi__galeri {
         grid-template-columns: 1fr 1fr;
     }
 
+    .penggunaan-produk {
+        text-align: justify;
+    }
+
+    .penggunaan-produk__label {
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .penggunaan-produk p:has(img) {
+        text-align: center !important;
+    }
+
     .penggunaan-produk img {
-        width: 280px !important;
+        width: 260px !important;
         height: 200px !important;
         max-width: 100% !important;
         object-fit: cover !important;
+        display: inline-block !important;
+        margin: 4px 8px 6px !important;
     }
 }
 
@@ -302,7 +415,40 @@ main {
 
     .galeri-produk {
         grid-template-columns: 1fr;
-        max-width: 400px;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        gap: 24px;
+    }
+
+    .galeri-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-produk__gallery {
+        width: 100%;
+        max-width: 300px;
+        height: 220px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .galeri-item__label {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0 0;
+    }
+
+    .penggunaan-produk__label {
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .penggunaan-produk p:has(img) {
+        text-align: center !important;
     }
 
     .penggunaan-produk img {
@@ -336,6 +482,8 @@ main {
 
     .detail-produk__img {
         display: block;
+        width: 100%;
+        max-width: 300px;
         margin: 0 auto;
     }
 
@@ -347,16 +495,59 @@ main {
         font-size: 26px;
     }
 
+    .galeri-produk {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    .galeri-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-produk__gallery {
+        width: 100%;
+        max-width: 300px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .galeri-item__label {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0 0;
+    }
+
     .jenis-aplikasi__galeri {
         grid-template-columns: 1fr;
+    }
+
+    .penggunaan-produk {
+        width: 100%;
+        text-align: center;
+    }
+
+    .penggunaan-produk__label {
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .penggunaan-produk p:has(img) {
+        text-align: center !important;
     }
 
     .penggunaan-produk img {
         width: 100% !important;
         max-width: 260px !important;
         height: 200px !important;
-        object-fit: cover !important;
         display: block !important;
-        margin: 12px auto !important;
+        margin: 4px auto 6px !important;
+        object-fit: cover !important;
     }
 }

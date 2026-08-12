@@ -87,7 +87,7 @@
         <!-- ================= HERO ================= -->
         <section class="hero position-relative overflow-hidden">
             <video class="hero__video" autoplay muted loop playsinline>
-                <source src="{{ asset('video/0810(2).mp4') }}" type="video/mp4">
+                <source src="{{ asset('video/0812.mp4') }}" type="video/mp4">
                 Browser Anda tidak mendukung video.
             </video>
             <div class="hero__overlay"></div>
@@ -145,7 +145,7 @@
                     <!-- Gambar -->
                     <div class="col-lg-6 order-1 order-lg-2">
                         <img
-                            src="{{ asset('images/pabrik1.jpg') }}"
+                            src="{{ asset('images/pabrik2v.png') }}"
                             class="img-fluid rounded"
                             alt="Tentang Perusahaan"
                             loading="lazy">

@@ -138,7 +138,7 @@
                 <div class="col-lg-6 order-1 order-lg-2">
                     <div class="sejarah-perusahaan__gambar">
                         <img
-                            src="{{ asset('images/sejarahv2.jpg') }}"
+                            src="{{ asset('images/pabrik1v.png') }}"
                             alt="Sejarah Perusahaan"
                             class="img-fluid rounded"
                             loading="lazy">
@@ -163,7 +163,7 @@
                 <p class="komitmen-perusahaan__kutipan">
                     "Kami memberdayakan masyarakat melalui penciptaan peluang kerja dan
                     pengembangan keterampilan, sekaligus membangun perusahaan plywood
-                    yang profesional dan berdaya saing lokal."
+                    yang profesional."
                 </p>
             </div>
         </div>
