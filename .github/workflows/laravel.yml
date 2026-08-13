@@ -101,7 +101,7 @@ jobs:
           echo "✅ Semua migration sudah berjalan."
 
   deploy-production:
-    name: Deploy to telur.wijayaplywoods.com
+    name: Deploy to company.wijayaplywoods.com
     needs: laravel-tests
     # HANYA jalan jika kamu membuat TAG (misal v1.0)
     if: startsWith(github.ref, 'refs/tags/v')
@@ -114,6 +114,11 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.4"
+
+      - name: 🟢 Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Install Composer Prod
         run: composer install --no-dev --optimize-autoloader --no-interaction
