@@ -120,13 +120,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install Composer Prod
-        run: composer install --no-dev --optimize-autoloader --no-interaction
-
       - name: Build Frontend
         run: |
           npm ci
           npm run build
+
+      - name: Install Composer Prod
+        run: composer install --no-dev --optimize-autoloader --no-interaction
 
       - name: Create Deployment Package
         run: |
